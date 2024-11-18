@@ -47,7 +47,7 @@ function App() {
         <Route path="/" element={<Home movies={movies} />} />
         
         {/* Dynamic Route for Trailer */}
-        <Route path="api/Trailer/:ytTrailerId" element={<Trailer />} />
+        <Route path="/Trailer/:ytTrailerId" element={<Trailer />} />
         
         {/* Dynamic Route for Reviews - Passing props */}
         <Route
