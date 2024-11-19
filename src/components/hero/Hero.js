@@ -11,7 +11,7 @@ const Hero = ({ movies }) => {
     function reviews(movieId) {
         navigate(`/Reviews/${movieId}`)
     }
-    console.log("--------", movies)
+   
     return (
         <div>
             <Carousel>
@@ -34,7 +34,9 @@ const Hero = ({ movies }) => {
 
                                             </div>
                                             <div className='movie-buttons-container'>
-                                                <Link to={`Trailer/${item.trailerLink.substring(item.trailerLink.length - 11)}`}>
+                                                <Link  
+                                                to={`/Trailer/${item.trailerLink.substring(item.trailerLink.length - 11)}`}
+                                                >
                                                     <div className='play-button-icon-conatiner'>
                                                         <FontAwesomeIcon className='play-button-icon' icon={faCirclePlay}></FontAwesomeIcon>
                                                     </div>

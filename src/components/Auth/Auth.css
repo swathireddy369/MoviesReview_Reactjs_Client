@@ -1,0 +1,30 @@
+.input{
+    margin-top:1rem;
+    border-radius: 0.5rem;
+    /* font-size: 1rem; */
+
+}
+.button{
+    margin-top: 2rem;
+    width:200;
+    height: 100;
+    background-color:  rgb(64, 37, 101);
+}
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.body {
+  /* background-color: #282c34; */
+  /* background-color: #402565; */
+  background-image: linear-gradient(135deg, rgb(64, 37, 101), rgb(48, 190, 150));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

@@ -7,6 +7,7 @@ import React from "react";
 const Trailer = ()=>{
     let params=useParams();
     let key=params.ytTrailerId;
+    console.log("====true===========");
     
     return(
         <div className="react-player-container">
