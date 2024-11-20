@@ -43,7 +43,7 @@ const Auth = () => {
         <div className="body">
             {contextHolder}
             <input className="input" name="UserName" placeholder="Username" value={userName} onChange={(e) => handleChange(e, true)}  ></input>
-            <input className="input" name="password" placeholder="Password" value={password} onChange={(e) => handleChange(e, false)} ></input>
+            <input className="input" name="password" placeholder="Password" type="password" value={password} onChange={(e) => handleChange(e, false)} ></input>
             <Button className="button" type={'primary'} onClick={handleSubmit}>Login</Button>
         </div>
     )
