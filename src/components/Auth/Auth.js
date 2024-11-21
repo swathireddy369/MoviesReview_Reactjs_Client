@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, message } from "antd";
+import { Button, message,Form,Input } from "antd";
 import { authServer } from "../../api/axiosConfig";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
@@ -31,8 +31,8 @@ const Auth = () => {
             navigate("/movies")
 
         } catch (error) {
+
             if (error && error.response && error.response.data && error.response.data.error) {
-               
                 messageApi.error(
                     error.response.data.error,
                 );
@@ -40,11 +40,29 @@ const Auth = () => {
         }
     }
     return (
+        
         <div className="body">
             {contextHolder}
-            <input className="input" name="UserName" placeholder="Username" value={userName} onChange={(e) => handleChange(e, true)}  ></input>
-            <input className="input" name="password" placeholder="Password" type="password" value={password} onChange={(e) => handleChange(e, false)} ></input>
-            <Button className="button" type={'primary'} onClick={handleSubmit}>Login</Button>
+            <Form layout='vertical' className="form-Container" onFinish={handleSubmit}
+            >
+                 <Form.Item name="userName" label="Usename"  value={userName} rules={[
+                       { required:true,message:"Please input your username"}
+                    ]} style={{
+                        width: "100%"
+                      }}
+                      >
+                    <Input  placeholder='Username' onChange={(e) => handleChange(e, true)}  ></Input>
+                </Form.Item>
+                <Form.Item name="password" label="Password"  value={password} rules={[
+                       { required:true,message:"Please input your password"}
+                    ]} style={{
+                        width: "100%"
+                      }}>
+                    <Input.Password  placeholder='Password' onChange={(e) => handleChange(e, false)}/>
+                </Form.Item>
+           
+            <Button className="button" type={'primary'} htmlType="submit" >Login</Button>
+       </Form>
         </div>
     )
 

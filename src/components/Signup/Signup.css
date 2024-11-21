@@ -1,0 +1,22 @@
+.form-Container{
+    border:1px solid grey;
+   padding :3rem 5rem;
+    border-radius:2rem;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(230, 230, 230, 0.8));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.input{
+    
+}
+.button1{
+    color:white;
+    border: transparent;
+}
+.ant-form-item-explain-error{
+    font-size: smaller;
+}

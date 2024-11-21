@@ -29,7 +29,10 @@ const Header = () => {
                 </Nav>
                 <Button variant="outline-info"  className="me-2" to="/login">
                 <NavLink className="nav-link" to="/login">Login</NavLink></Button>
-                <Button variant="outline-info" >Register</Button>
+
+                <Button variant="outline-info" className="me-2" to="/signup">
+                <NavLink className="nav-link" to="signup">
+                Register</NavLink></Button>
             </Navbar.Collapse>
         </Container>
 

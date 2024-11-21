@@ -8,6 +8,7 @@ import Header from "./components/header/Header";
 import Trailer from "./components/trailer/Trailer";
 import Reviews from "./components/reviews/Reviews";
 import Auth from "./components/Auth/Auth"
+import Signup from './components/Signup/Signup';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -47,7 +48,7 @@ function App() {
         {/* <Route path="/" element={<Layout />} /> */}
         <Route path="/" element={<Navigate to="/login" replace/>}/>
         <Route exact path="/movies" element={<Home movies={movies} />} />
-
+        <Route path="/signup"  element={<Signup/>}/>
 
         <Route default path="/login" element={<Auth  />}/>
 
